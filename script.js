@@ -64,6 +64,28 @@ for (let i = 0; i < objArr.length; i++) {
 avgAge = sum / objArr.length;
 console.log(avgAge);
 
+//*******Part 5**********/
+console.log(`********Part 5***********`);
+//As a final task, transform the final set of data back into CSV format.
+let str = '';
+str = str + (Object.keys(objArr[0])).join(',') + '\\n';
+//console.log(str);
+for (let i = 0; i < objArr.length; i++) {
+    str = str + (Object.values(objArr[i])).join(',') + '\\n';
+}
+console.log(str);
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
