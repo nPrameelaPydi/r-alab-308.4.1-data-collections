@@ -24,7 +24,7 @@ for (const c of csv) {
 //console.log(main);
 
 //*******Part 3**********/
-console.log(`********Part 3***********`)
+console.log(`********Part 3***********`);
 let heading = main[0];
 let objArr = [];
 for (let i = 1; i < main.length; i++) {
@@ -36,6 +36,35 @@ for (let i = 1; i < main.length; i++) {
     objArr.push(obj);
 }
 console.log(objArr);
+
+//*******Part 4**********/
+console.log(`********Part 4***********`);
+//sorting basing on id
+objArr.sort((a, b) => parseInt(a.id) - parseInt(b.id));
+console.log(objArr);
+//Remove the last element from the sorted array.
+objArr.pop();
+console.log(objArr);
+//Insert the following object at index 1:
+//{ id: "48", name: "Barry", occupation: "Runner", age: "25" }
+let obj2 = { id: "48", name: "Barry", occupation: "Runner", age: "25" };
+//splice(index, deleteCount, item1, item2, ...)
+objArr.splice(1, 0, obj2);
+console.log(objArr);
+//Add the following object to the end of the array:
+//{ id: "7", name: "Bilbo", occupation: "None", age: "111" }
+objArr.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" });
+console.log(objArr);
+//Finally, use the values of each object within the array and the array’s length property to calculate the average age of the group. This calculation should be accomplished using a loop.
+let avgAge;
+let sum = 0;
+for (let i = 0; i < objArr.length; i++) {
+    sum = sum + parseInt(objArr[i]['age']);
+}
+avgAge = sum / objArr.length;
+console.log(avgAge);
+
+
 
 
 
